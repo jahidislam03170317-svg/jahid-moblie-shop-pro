@@ -1,0 +1,293 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+background:#f4f7fe;
+}
+
+.sidebar{
+width:260px;
+height:100vh;
+background:#111827;
+color:#fff;
+padding:25px;
+position:fixed;
+left:0;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+margin-bottom:40px;
+text-align:center;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar ul li{
+padding:15px;
+margin-bottom:12px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+font-size:17px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active{
+background:#2563eb;
+}
+
+.main{
+margin-left:260px;
+width:100%;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.profile{
+display:flex;
+gap:15px;
+align-items:center;
+font-weight:600;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.box{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.box h2{
+color:#2563eb;
+font-size:30px;
+margin-bottom:10px;
+}
+
+.title{
+margin:35px 0 20px;
+}
+
+#products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.product{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.product img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.product-info{
+padding:15px;
+}
+
+.product-info h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#2563eb;
+font-weight:bold;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.product button{
+width:100%;
+padding:12px;
+border:none;
+background:#2563eb;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+}
+.quick-actions{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:30px;
+}
+
+.action{
+background:#2563eb;
+color:white;
+padding:25px;
+text-align:center;
+border-radius:15px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.action:hover{
+transform:translateY(-5px);
+background:#1d4ed8;
+}
+<h2 class="title">Recent Orders</h2>
+
+<table class="orders-table">
+
+<tr>
+<th>Order ID</th>
+<th>Customer</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>#1001</td>
+<td>Rahim</td>
+<td>৳850</td>
+<td><span class="success">Completed</span></td>
+</tr>
+
+<tr>
+<td>#1002</td>
+<td>Karim</td>
+<td>৳1200</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>#1003</td>
+<td>Jahid</td>
+<td>৳1800</td>
+<td><span class="success">Completed</span></td>
+</tr>
+
+</table>
+.orders-table{
+width:100%;
+margin-top:20px;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-collapse:collapse;
+}
+
+.orders-table th{
+background:#2563eb;
+color:#fff;
+padding:15px;
+}
+
+.orders-table td{
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+.completed{
+background:#16a34a;
+color:#fff;
+padding:5px 12px;
+border-radius:20px;
+font-size:14px;
+}
+
+.pending{
+background:#f59e0b;
+color:#fff;
+padding:5px 12px;
+border-radius:20px;
+font-size:14px;
+}
+.best-products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.best-card{
+background:#fff;
+padding:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.best-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:10px;
+}
+
+.best-card h3{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.best-card p{
+color:#2563eb;
+font-weight:bold;
+}
+.toolbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:25px 0;
+gap:15px;
+}
+
+.toolbar input{
+flex:1;
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+outline:none;
+}
+
+.toolbar input:focus{
+border-color:#2563eb;
+}
+
+.toolbar button{
+padding:14px 22px;
+background:#2563eb;
+color:#fff;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+.toolbar button:hover{
+background:#1d4ed8;
+}

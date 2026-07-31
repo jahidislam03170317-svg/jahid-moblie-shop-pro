@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jahid Mobile Shop Pro</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+📱 Jahid Mobile Shop
+</div>
+
+<ul>
+
+<li class="active">🏠 Dashboard</li>
+
+<li>📦 Products</li>
+
+<li>📚 Inventory</li>
+
+<li>🛒 Orders</li>
+
+<li>👥 Customers</li>
+
+<li>📊 Reports</li>
+
+<li>⚙️ Settings</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+<div class="quick-actions">
+
+<div class="action">➕ Add Product</div>
+
+<div class="action">📦 Products</div>
+
+<div class="action">🛒 Orders</div>
+
+<div class="action">👥 Customers</div>
+
+</div>
+<div class="topbar">
+
+<h1>Dashboard</h1>
+
+<div class="profile">
+
+🔔
+
+👤 Admin
+
+</div>
+<div class="toolbar">
+
+<input
+type="text"
+id="searchProduct"
+placeholder="🔍 Search products...">
+
+<button id="addProductBtn">
+➕ Add Product
+</button>
+
+</div>
+</div>
+
+<div class="stats">
+
+<div class="box">
+<h2>245</h2>
+<p>Total Products</p>
+</div>
+
+<div class="box">
+<h2>35</h2>
+<p>Orders Today</p>
+</div>
+
+<div class="box">
+<h2>980</h2>
+<p>Customers</p>
+</div>
+
+<div class="box">
+<h2>৳58,500</h2>
+<p>Today's Sales</p>
+</div>
+
+</div>
+
+<h2 class="title">Latest Products</h2>
+
+<div id="products"></div>
+<h2 class="title">Recent Orders</h2>
+<h2 class="title">🔥 Best Selling Products</h2>
+
+<div class="best-products">
+
+<div class="best-card">
+<img src="images/iphone16.jpg" alt="">
+<h3>iPhone 16 Pro Max Cover</h3>
+<p>Sold : 250</p>
+</div>
+
+<div class="best-card">
+<img src="images/s24.jpg" alt="">
+<h3>Samsung S24 Cover</h3>
+<p>Sold : 180</p>
+</div>
+
+<div class="best-card">
+<img src="images/charger.jpg" alt="">
+<h3>Fast Charger 25W</h3>
+<p>Sold : 145</p>
+</div>
+
+</div>
+<table class="orders-table">
+
+<thead>
+<tr>
+<th>Order ID</th>
+<th>Customer</th>
+<th>Product</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>#1001</td>
+<td>Rahim</td>
+<td>iPhone 16 Cover</td>
+<td><span class="completed">Completed</span></td>
+</tr>
+
+<tr>
+<td>#1002</td>
+<td>Karim</td>
+<td>25W Charger</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>#1003</td>
+<td>Jahid</td>
+<td>AirPods Pro</td>
+<td><span class="completed">Completed</span></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
