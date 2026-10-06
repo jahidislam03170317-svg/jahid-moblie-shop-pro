@@ -1,22 +1,20 @@
 function openLetter() {
+    const letter = document.getElementById("letterOverlay");
 
-    document
-        .getElementById("letterOverlay")
-        .classList.add("show");
+    if (letter) {
+        letter.classList.add("show");
+    }
 
     createExtraHearts();
 }
 
-
 function closeLetter() {
+    const letter = document.getElementById("letterOverlay");
 
-    document
-        .getElementById("letterOverlay")
-        .classList.remove("show");
+    if (letter) {
+        letter.classList.remove("show");
+    }
 }
-
-
-/* Extra hearts when letter opens */
 
 function createExtraHearts() {
 
@@ -27,16 +25,14 @@ function createExtraHearts() {
         heart.innerHTML = "❤️";
 
         heart.style.position = "fixed";
-
-        heart.style.left =
-            Math.random() * 100 + "%";
-
+        heart.style.left = Math.random() * 100 + "%";
         heart.style.bottom = "-40px";
 
         heart.style.fontSize =
             (15 + Math.random() * 20) + "px";
 
         heart.style.zIndex = "150";
+        heart.style.pointerEvents = "none";
 
         heart.style.animation =
             "heartUp " +
@@ -52,14 +48,22 @@ function createExtraHearts() {
 }
 
 
-/* Click outside letter to close */
+// Letter-এর বাইরে click করলে close হবে
+document.addEventListener("DOMContentLoaded", function () {
 
-document
-    .getElementById("letterOverlay")
-    .addEventListener("click", function(event) {
+    const overlay =
+        document.getElementById("letterOverlay");
 
-        if (event.target === this) {
-            closeLetter();
-        }
+    if (overlay) {
 
-    });
+        overlay.addEventListener("click", function (event) {
+
+            if (event.target === overlay) {
+                closeLetter();
+            }
+
+        });
+
+    }
+
+});
